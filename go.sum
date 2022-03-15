@@ -13,6 +13,8 @@ github.com/aerokube/ggr v0.0.0-20181215175518-4a2e23fa1769 h1:5UpE5f0xRoCgAcxFnT
 github.com/aerokube/ggr v0.0.0-20181215175518-4a2e23fa1769/go.mod h1:c4gg5wIR9PyppUSe4swKbNiSLO0vivf7THFs3rkcBIU=
 github.com/aerokube/util v0.0.0-20190701120823-161c21b50f69 h1:fweUpmRn4GxKz+TFP9gmYs/k0unLEl5DJauqjwws7yI=
 github.com/aerokube/util v0.0.0-20190701120823-161c21b50f69/go.mod h1:xhDPwF7O2YfPEAqVQNmeGldyPgNRC/V6ZRP/GtIr7Y4=
+github.com/atotto/clipboard v0.1.4 h1:EH0zSVneZPSuFR11BlR9YppQTVDbh5+16AmcJi4g1z4=
+github.com/atotto/clipboard v0.1.4/go.mod h1:ZY9tmq7sm5xIbd9bOK4onWV4S6X0u6GY7Vn0Yu86PYI=
 github.com/aws/aws-sdk-go v1.20.12 h1:xV7xfLSkiqd7JOnLlfER+Jz8kI98rAGJvtXssYkCRs4=
 github.com/aws/aws-sdk-go v1.20.12/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=

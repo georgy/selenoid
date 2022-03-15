@@ -23,6 +23,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/aerokube/selenoid/clipboard"
 	"github.com/aerokube/selenoid/event"
 	"github.com/aerokube/selenoid/jsonerror"
 	"github.com/aerokube/selenoid/service"
@@ -482,6 +483,20 @@ func proxy(w http.ResponseWriter, r *http.Request) {
 		done <- cancel
 	}()
 	requestId := serial()
+
+	fragments := strings.Split(r.URL.Path, slash)
+	if len(fragments) == 4 && fragments[len(fragments)-1] == "clipboard" && disableDocker {
+		id := fragments[2]
+		_, ok := sessions.Get(id)
+		if ok {
+			clipboard.Handler(w, r);
+			return
+		} else {
+			util.JsonError(w, fmt.Sprintf("Unknown session %s", id), http.StatusNotFound)
+			log.Printf("[%d] [SESSION_NOT_FOUND] [%s]", requestId, id)
+		}
+	}
+
 	(&httputil.ReverseProxy{
 		Director: func(r *http.Request) {
 			fragments := strings.Split(r.URL.Path, slash)
